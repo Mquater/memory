@@ -21,15 +21,15 @@ $('.playbox .box').on('click',function(){
         if(first===second){
             console.log(first===second)
             return setTimeout(function(){
-                $('.playbox .box').children('.active').addClass('remove')
-            },1000);//相同,class加上remove
-            
+                $('.playbox .box').children('.active').addClass('remove');
+                count=0;
+            },500);//相同,class加上remove,延时1s
         }else{
             return setTimeout(function(){
-            $('.playbox .box').children('.active').removeClass('active')
-            },5000);//不同,class移除active
+            $('.playbox .box').children('.active').removeClass('active');
+            count=0;
+            },5000);//不同,class移除active,延时5s
         }
-        count=0;
         console.log(count);
         }
      }
