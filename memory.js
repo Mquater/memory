@@ -4,7 +4,6 @@ var second;
 compareList=[];
 $('.playbox .box').on('click',function(){
     if($(this).children().hasClass('active')){
-        $(this).children().removeClass('active');
         console.log('请点击另一张卡牌');//如果点到已经翻开的牌
     }else if($(this).children().hasClass('remove')){
         console.log('请点击牌');//如果点到已经完成匹配的牌
