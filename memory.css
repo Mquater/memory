@@ -1,0 +1,86 @@
+* {
+    margin:0;
+    padding:0;
+  }
+  body {
+    height:100vh;
+  }
+  .playbox {
+    margin:0 auto;
+    width:500px;
+    height:650px;
+    border: solid 1px black;
+  }
+  .playbox > div {
+    float:left
+  }
+  .playbox .card1 {
+    width:94%;
+    height:94%;
+    margin:1%;
+    border:solid 1px black;
+    background-color:green;
+  }
+  .playbox .card2 {
+    width:94%;
+    height:94%;
+    margin:1%;
+    border:solid 1px black;
+    background-color:pink;
+  }
+  .playbox .card3 {
+    width:94%;
+    height:94%;
+    margin:1%;
+    border:solid 1px black;
+    background-color:blue;
+  }
+  .playbox .card4 {
+    width:94%;
+    height:94%;
+    margin:1%;
+    border:solid 1px black;
+    background-color:red;
+  }
+  .playbox .card5 {
+    width:94%;
+    height:94%;
+    margin:1%;
+    border:solid 1px black;
+    background-color:yellow;
+  }
+  .playbox .card6 {
+    width:94%;
+    height:94%;
+    margin:1%;
+    border:solid 1px black;
+    background-color:orange;
+  }
+  .playbox:after {
+    content:'';
+    display:block;
+    clear:both;
+  }
+  .playbox .card {
+    display:none;
+    border:solid
+  }
+  .playbox .active {
+    display:block;
+  }
+  .playbox .remove {
+    opacity:0;
+  }
+  .playbox .box {
+    width:30%;
+    height:23%;
+    margin:1%;
+    border:solid 1px red;
+  }
+  .playagain {
+    width:80px;
+    height:20px;
+    border:solid 1px black;
+    margin:10px auto;
+    background-color: yellow;
+  }
