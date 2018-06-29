@@ -76,11 +76,17 @@
     height:23%;
     margin:1%;
     border:solid 1px red;
+    cursor: pointer;
   }
   .playagain {
-    width:80px;
-    height:20px;
-    border:solid 1px black;
+    width:100px;
+    height:40px;
+    border:solid 1px  black;
+    border-radius: 5px;
     margin:10px auto;
     background-color: yellow;
+    cursor: pointer;
+  }
+  .playagain > p {
+    margin:10px 15px;
   }

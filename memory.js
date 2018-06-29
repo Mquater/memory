@@ -1,30 +1,44 @@
 var count=0;
 var first;
 var second;
+compareList=[];
 $('.playbox .box').on('click',function(){
     if($(this).children().hasClass('active')){
+        $(this).children().removeClass('active');
         console.log('请点击另一张卡牌');//如果点到已经翻开的牌
     }else if($(this).children().hasClass('remove')){
-        console.log('请点击一张牌');//如果点到已经完成匹配的牌
+        console.log('请点击牌');//如果点到已经完成匹配的牌
     }else{
      $(this).children().addClass('active');//点到未翻开的牌
+     console.log( $(this).children('.active'))
      count++;//点击次数
      if(count===1){
-        first=$(this).children().css('background-color');
+        first=$(this).children().css('background-color');//记录第一张牌颜色
         console.log(first);
         console.log(count);
      }else{
-        second=$(this).children().css('background-color');
+        second=$(this).children().css('background-color');//记录第二张牌颜色
         console.log(second);
         console.log(count);
+        //比较两张牌颜色
         if(first===second){
             console.log(first===second)
-            $(this).parent().find('active').addClass('remove');
+            return setTimeout(function(){
+                $('.playbox .box').children('.active').addClass('remove')
+            },1000);//相同,class加上remove
+            
         }else{
-            $(this).parent().find('active').removeClass('active');
+            return setTimeout(function(){
+            $('.playbox .box').children('.active').removeClass('active')
+            },5000);//不同,class移除active
         }
         count=0;
         console.log(count);
         }
      }
 });
+$('.playagain').on('click',function(){
+    $('.playbox .box').children().removeClass('remove');
+    $('.playbox .box').children().removeClass('active');
+    count=0;
+})
