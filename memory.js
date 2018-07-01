@@ -19,12 +19,15 @@ $('.playbox .box').on('click',function(){
             setTimeout(function(){
                 $('.playbox .box').children('.active').addClass('remove');
                 count=0;
-            },500);//相同,class加上remove,延时1s
+            },500);//相同,class加上remove,延时0.5s
             //判断游戏是否结束
             if($('.playbox .box').children('.remove').length===10){
-                console.log(totalCount);
-                $('.playbox .box').children().removeClass('remove');
-                alert('游戏结束,您一共用了'+ totalCount +'步,请再来一局');
+                setTimeout(function(){
+                    console.log(totalCount);
+                    $('.playbox .box').children().removeClass('remove');
+                    alert('游戏结束,您一共用了'+ totalCount +'步,请再来一局');
+                }, 1000);
+
             }
         }else{
             setTimeout(function(){
@@ -37,6 +40,7 @@ $('.playbox .box').on('click',function(){
         }
 });
 $('.playagain').on('click',function(){
+    //重置所有显示,移除效果
     $('.playbox .box').children().removeClass('remove');
     $('.playbox .box').children().removeClass('active');
     count=0;
